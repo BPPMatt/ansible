@@ -19,4 +19,4 @@
   - name: Remove failed and unreachable hosts from play_hosts
     debug:
       msg: "Hi"
-    when: connection_test.unreachable is defined or connection_test.rc != 0
+    when: result.unreachable is defined or connection_test.rc != 0
