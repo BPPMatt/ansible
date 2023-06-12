@@ -1,0 +1,13 @@
+---
+
+- name: test
+  hosts: all
+  tasks:
+  - name: ping
+    ansible.builtin.ping:
+    register: result
+    
+  - name: ping result
+    debug:
+      var: result
+    
