@@ -11,3 +11,7 @@
     debug:
       var: result
     
+  - name: run if ping successful
+    debug:
+      msg: "Ping was successful"
+    when: result.changed == false
