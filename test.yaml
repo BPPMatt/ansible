@@ -16,7 +16,7 @@
       msg: "Ping was successful"
     when: result.changed == false
     
-  - name: Remove failed and unreachable hosts from play_hosts
-    debug:
-      msg: "Hi"
-    when: result.unreachable
+  - name: Send alert
+      debug:
+        msg: "Ping failed"
+    when: result.changed
