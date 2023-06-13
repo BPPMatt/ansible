@@ -17,6 +17,6 @@
     when: result.changed == false
     
   - name: Send alert
-      debug:
-        msg: "Ping failed"
+    debug:
+      msg: "Ping failed"
     when: result.changed
